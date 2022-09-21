@@ -52,7 +52,7 @@ function createMarkupList(data = []) {
 function createMarkupInfo(data = []) {
   return data
     .map(({ name, capital, population, flags, languages }) => {
-      return `<div class='bigList'><img src='${flags.svg}' alt='flag' weith='50' height='50'>${name.official}</div>
+      return `<div class='list'><img src='${flags.svg}' alt='flag' weith='50' height='50'>${name.official}</div>
       <ul>
       <li class='list'>Capital: ${capital}</li>
       <li class='list'>Population: ${population}</li>
