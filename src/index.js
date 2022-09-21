@@ -41,8 +41,10 @@ function searchCountry(event) {
 function createMarkupList(data = []) {
   return data
     .map(({ name, capital, population, flags, languages }) => {
-      return `<li class='list'><img src='${flags.svg}' alt='flag' weith='20' height='10'>
-      <span>${name.official}</span></li>`
+      return `<li class='list'>
+      <img src='${flags.svg}' alt='flag' weith='20' height='10'>
+      <span>${name.official}</span>
+      </li>`
      })
     .join('');
 }
