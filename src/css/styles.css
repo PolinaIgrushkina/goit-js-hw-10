@@ -24,4 +24,24 @@ body {
   flex-direction: row;
   align-items: baseline;
   gap: 10px;
+
+  font-family: inherit;
+  font-weight: 700;
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.list {
+  font-family: inherit;
+  font-weight: 700;
+  list-style: none;
+}
+
+.bigList {
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 30px;
 }

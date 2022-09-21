@@ -52,12 +52,12 @@ function createMarkupList(data = []) {
 function createMarkupInfo(data = []) {
   return data
     .map(({ name, capital, population, flags, languages }) => {
-      return `<h2>Official name: ${name.official}</h2>
-  <p>Capital: ${capital}</p>
-  <p>Population: ${population} people</p>
-  <p>National flag:</p>
-  <img src='${flags.svg}' alt='flag' weith='50' height='50'>
-  <p>Languages: ${Object.values(languages)}<p>`})
+      return `<div class='bigList'><img src='${flags.svg}' alt='flag' weith='50' height='50'>${name.official}</div>
+      <ul>
+      <li class='list'>Capital: ${capital}</li>
+      <li class='list'>Population: ${population}</li>
+      <li class='list'>Languages: ${Object.values(languages)}<li>
+      </ul>`})
     .join('');
 };
 
