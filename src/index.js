@@ -18,13 +18,13 @@ inputEl.addEventListener('input', debounce(searchCountry, DEBOUNCE_DELAY));
 function searchCountry(event) {
   const countryName = event.target.value.trim();
 
-  cleanMarkup(countryListEl);
-  cleanMarkup(countryInfoEl);
+  addMarkupOnPage(countryListEl);
+  addMarkupOnPage(countryInfoEl);
 
   if (!countryName) {
     return;
   }
-  
+
   return fetchCountries(countryName)
     .then((data) => {
       console.log(data);
@@ -73,7 +73,3 @@ function addMarkupOnPage(elem, markup = '') {
   elem.innerHTML = markup;
 };
 
-//Функция очищающая разметку
-function cleanMarkup(element) {
-  element.innerHTML = '';
-};
