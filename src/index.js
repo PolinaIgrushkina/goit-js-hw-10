@@ -21,6 +21,10 @@ function searchCountry(event) {
   cleanMarkup(countryListEl);
   cleanMarkup(countryInfoEl);
 
+  if (!countryName) {
+    return;
+  }
+  
   return fetchCountries(countryName)
     .then((data) => {
       console.log(data);
